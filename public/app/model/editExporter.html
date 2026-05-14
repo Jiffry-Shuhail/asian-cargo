@@ -1,0 +1,213 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="editExporter">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-12 stretch-card">
+                    <div class="card">
+                        <div class="card-body p-t-5 p-b-0">
+                            <p class="font-weight-bold m-t-25 m-b-0 default-headline-font registration-heading">Edit Exporter Detail</p>
+                            <label class="m-b-20 registration-sub-heading">The Form that you are trying to edit is, affect to the searching criteria.</label>
+                            <form class="form-sample">
+                                <p class="card-description"></p>
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for severe <b>Exporter Reference Information</b> with the purpose of preventing duplication.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Reference No</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="reference-no" placeholder="**********"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Exporter Name</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border fitstCapitalLetter" id="exporter-name" placeholder="Asian Cargo"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Contact Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border integer paste" autocomplete="off" id="contact-number" placeholder="076 300 0000" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border" id="address" placeholder="No 23/A, Kuruduwatta Road"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for <b>Document Header Identification</b>. All the fields are required.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Buyer</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border fitstCapitalLetter" id="buyer" placeholder="John"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Consignee</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border fitstCapitalLetter" id="consignee" placeholder="Wick"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Consignee Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border" id="consignee-address" placeholder="No 23/A, Kuruduwatta Road"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for <b>the Information</b>.
+                                </div>
+                                <div class="row m-b-10">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Country of final destination</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="country-of-final-destination" placeholder="Country / Country"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Country of origin Goods</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="country-of-origin-goods" placeholder="Country / Country"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row m-b-10">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Port of discharge</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="port-of-discharge" placeholder="Country / Country"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Port of loading</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="port-of-loading" placeholder="Country / Country"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row m-b-10">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Terms of delivery and payments</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border" id="terms-of-delivery-and-payments" placeholder="OPEN ACCOUNT (90 DAYS)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for <b>Charges Information</b>.
+                                </div>
+                                
+                                <div class="row m-b-10">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Packing charges</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border double paste" autocomplete="off" id="packing-charges" placeholder="00"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Weight charges</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border double paste" autocomplete="off" id="weight-charges" placeholder="00"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following field is used for <b>count of Shipment Information</b>.
+                                </div>
+                                
+                                <div class="row m-b-10">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Shipment</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border integer paste" autocomplete="off" id="shipment-count-number" placeholder="0" value="1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 grid-margin">
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5">
+                                                    <button type="button" class="btn btn-inverse-warning edit-customer d-none" >Edit Customer Details</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                                <button type="button" class="btn btn-inverse-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-inverse-primary m-l-10" id="save-exporter">Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/app/js/editExporter.js"></script>

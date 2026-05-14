@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" href="/images/light.png" id="light-scheme-icon-apple">
+    <link rel="apple-touch-icon" href="/images/dark.png" id="dark-scheme-icon-apple">
+    <link rel="icon" type="image/png" href="/images/light.png" id="light-scheme-icon">
+    <link rel="icon" type="image/png" href="/images/dark.png" id="dark-scheme-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Asian Cargo</title>
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/dist/css/lobibox.css" />
+
+    <link rel="stylesheet" href="/stylesheets/croppie.css">
+    <link rel="stylesheet" href="/stylesheets/newstyle.css">
+    <link rel="stylesheet" href="/stylesheets/floating.css">
+    <link rel="stylesheet" href="/vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/app/css/autocompleter.css">
+    <link rel="stylesheet" href="/app/css/style.css">
+    <link rel="stylesheet" href="/app/css/loader.css">
+    <script src="/javascripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/semantic/components/icon.css">
+    <link rel="stylesheet" href="/semantic/components/checkbox.css">
+    <link rel="stylesheet" href="/semantic/components/button.css">
+    <link rel="stylesheet" href="/semantic/components/label.css">
+    <link rel="stylesheet" href="/semantic/components/dropdown.css">
+    <link rel="stylesheet" href="/semantic/components/input.css">
+    <link rel="stylesheet" href="/semantic/components/menu.css">
+    <link rel="stylesheet" href="/semantic/components/tab.css">
+    <link rel="stylesheet" href="/semantic/components/checkbox.css">
+    <link rel="stylesheet" href="/semantic/components/progress.min.css">
+    <link rel="stylesheet" href="/semantic/components/transition.css">
+    <link rel="stylesheet" href="/app/css/intlTelInput.css?1721468771539">
+    <!--<link rel="stylesheet" href="https://editor.datatables.net/extensions/Editor/css/editor.dataTables.min.css">-->
+    <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">-->
+
+    <link rel="stylesheet" href="https://bossanova.uk/jexcel/v4/jexcel.css" type="text/css" />
+    <link rel="stylesheet" href="https://bossanova.uk/jsuites/v3/jsuites.css" type="text/css" />
+
+    <script src="/javascripts/daterangepicker.js"></script>
+    <script src="/javascripts/datepicker.en.js"></script>
+    <script src="/semantic/components/dropdown.js"></script>
+</head>
+
+<body class="sidebar-icon-only">
+    <div
+        class="container-fluid page-body-wrapper bg-light text-center align-items-center justify-content-center vh-100 loading-content d-none">
+        <div class="mb-2 d-flex loading">
+            <div class="preloader">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-scroller display-content">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="navbar-brand-wrapper d-flex justify-content-center">
+                <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+                    <a class="navbar-brand brand-logo" href="#"><img src="/images/logo4.svg" alt="logo"
+                            style="width: 150px; height: auto;" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="#"><img src="/images/logo-mini2.svg" alt="logo" /></a>
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                        data-toggle="minimize">
+                        <img src="/images/logo-mini2.svg" alt="logo" style="width: 30px; height: auto" />
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <div class="w-100 d-none" id="daterangetagAndAutocomplter">
+                    <ul class="navbar-nav w-100 m-r-10 navbar-nav-right">
+                        <li class="nav-item nav-search d-lg-block w-100">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend search-prepend">
+                                    <select class="ui fluid dropdown dropdown-center table-transparent"
+                                        id="search-exporter">
+                                    </select>
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control text-transform-none" placeholder="Search hear."
+                                    id="shipmentSearchAuto" />
+                            </div>
+
+                            <!--                                <div class="ui fluid search selection dropdown" style="background: #ececec; border-radius: 4px; height: 40px; padding-left: 10px; padding-top: 5px;" >
+                                                                    <input type="hidden" name="country">
+                                                                    <i class="text-gray mdi mdi-magnify"></i>
+                                                                    <div class="default text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Filters</div>
+                                                                    <div class="menu"></div>
+                                                                </div>-->
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="w-100" id="shipmentStausBar">
+                    <ul class="navbar-nav w-100 m-r-10 navbar-nav-right">
+                        <li class="nav-item nav-search d-lg-block w-100">
+
+                            <!-- <div class="input-group">
+                                <div class="input-group-prepend search-prepend">
+                                    <select class="ui fluid dropdown dropdown-center table-transparent"
+                                    id="search-exportersd">
+                                    <option>Origina</option>
+                                    <option>Add Status</option>
+                                    </select>
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control text-transform-none" placeholder="Search hear."
+                                    id="shipmentSearchAuto" />
+                            </div> -->
+
+                            <div class="input-group" style="padding-right: 0;">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-anchor"></i>
+                                    </span>
+                                </div>
+
+                                <div class="ui form-control dropdown dropdown-center" id="shipment-status" style="height: 40px;">
+                                    <span class="default text">Status</span>
+                                    <div class="menu w-100">
+                                        <div class="item" data-value="ADD STATUS">ADD STATUS</div>
+                                        <div class="item" data-value="ORIGINAL">Original</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="autocomplete-input">
+                                <div class="input-group">
+
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="mdi mdi mdi-anchor"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" value="Original" class="form-control" id="shipment-status"
+                                        autocomplete="off" placeholder="Shipping status..." />
+                                    <i class="fa fa-arrow-down field-icon" id="toggle-status"></i>
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-100 d-none" id="customerSearch">
+                    <ul class="navbar-nav w-100 m-r-10 navbar-nav-right">
+                        <li class="nav-item nav-search d-lg-block w-100">
+                            <div class="input-group">
+                                <div class="input-group-prepend" id="search-prepend">
+                                    <select class="ui fluid dropdown dropdown-center table-transparent d-none"
+                                        id="search-goods-type">
+                                        <option value="name">Name</option>
+                                        <option value="cat">Category</option>
+                                    </select>
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control text-transform-none" placeholder="Search hear."
+                                    id="customerSearchAuto" />
+                            </div>
+                            <!--                                <div class="ui fluid multiple search selection dropdown" style="background: #ececec; border-radius: 4px; height: 40px; padding-left: 10px; padding-top: 5px;" id="customerSearchAuto">
+                                                                    <input type="hidden" name="country">
+                                                                    <i class="text-gray mdi mdi-magnify"></i>
+                                                                    <div class="default text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Customer</div>
+                                                                    <div class="menu"></div>
+                                                                </div>-->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-100 d-none" id="usersSearchInput">
+                    <ul class="navbar-nav w-100 m-r-10 navbar-nav-right">
+                        <li class="nav-item nav-search d-lg-block w-100">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control text-transform-none"
+                                    placeholder="Search User." />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-100 d-none" id="clearingShipmentAutoSearch">
+                    <ul class="navbar-nav w-100 m-r-10 navbar-nav-right">
+                        <li class="nav-item nav-search d-lg-block w-100">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="mdi mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control text-transform-none"
+                                    placeholder="Search Shipment." />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="navbar-nav m-r-10 m-l-10 navbar-nav-right">
+                    <li class="nav-item dropdown m-r-10 m-l-10">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
+                            id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="mdi mdi-bell mx-0"></i>
+                            <span class="count d-none" id="notification-count"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="notificationDropdown" id="notifications">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Empty Notifications</p>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <% if(image!=null){%>
+                                <img src="<%=image %>" alt="" />
+
+                                <%}else{%>
+                                    <img src="/images/useravtar.svg" alt="" />
+                                    <%} %>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
+                            <a class="dropdown-item">
+                                <i class="mdi mdi-settings text-primary"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="/sessionLogout">
+                                <i class="mdi mdi-logout text-primary"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link registration">
+                            <img src="app/img/menu/ship.svg" alt="Shipment Process" class="menu-icon-img-size" />
+                            <span class="menu-title">Shipment Process</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cursor">
+                            <img src="app/img/clearing.svg" alt="Clearing" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Clearing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cursor">
+                            <img src="app/img/quotation.svg" alt="Clearing" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Quotation</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cursor">
+                            <img src="app/img/shopping-bag.svg" alt="Shipments" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Shipments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link exit cursor">
+                            <img src="app/img/customer.svg" alt="Customer" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Customers</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link exit cursor">
+                            <img src="app/img/goods.svg" alt="Goods" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Goods</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link exit cursor">
+                            <img src="app/img/category.svg" alt="Category" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Category</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link exit cursor">
+                            <img src="app/img/user.svg" alt="Users" class="menu-icon-img-size activenac" />
+                            <span class="menu-title">Users</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-panel main-panel-scroll">
+                <div class="content-wrapper">
+
+                </div>
+                <div class="container-fluid page-body-wrapper bg-light text-center align-items-center justify-content-center vh-100 loading-content d-none"
+                    id="loader">
+                    <div class="mb-2 d-flex loading">
+                        <div class="preloader">
+                            <i>.</i>
+                            <i>.</i>
+                            <i>.</i>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span
+                            class="text-muted text-center text-sm-left d-block d-sm-inline-block font-weight-light">Copyright
+                            ©
+                            <script>document.write(/\d{4}/.exec(Date())[0])</script> <a
+                                href="https://hidayasolutions.com/" rel="nofollow"><strong>Hidaya Solutions (Pvt)
+                                    Ltd</strong></a> All rights reserved.
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/off-canvas.js"></script>
+    <script src="/vendors/base/vendor.bundle.base.js"></script>
+    <script src="/vendors/chart.js/Chart.min.js"></script>
+    <script src="/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="/javascripts/data-table.js"></script>
+    <script src="/javascripts/dataTables.bootstrap4.js"></script>
+    <script src="/javascripts/datatable-phoneNumber.js"></script>
+    <script src="/javascripts/dashboard.js"></script>
+    <script src="/javascripts/hoverable-collapse.js"></script>
+    <script src="/javascripts/jquery.dataTables.js"></script>
+    <script src="/javascripts/template.js"></script>
+    <script src="/semantic/semantic.js"></script>
+    <script src="/javascripts/lobibox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="/javascripts/croppie.js"></script>
+    <script src="/javascripts/tableToExcel.js"></script>
+
+    <script src="/demo/demo.js"></script>
+    <script src="/app/js/cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+    <script src="/javascripts/pdfmake.js"></script>
+    <script src="/javascripts/vfs_fonts.js"></script>
+
+    <script src="https://bossanova.uk/jexcel/v4/jexcel.js"></script>
+    <script src="https://bossanova.uk/jsuites/v3/jsuites.js"></script>
+
+    <script type="text/javascript" src="/javascripts/xlsx/shim.min.js"></script>
+    <script src="/javascripts/xlsx/xlsx.full.min.js"></script>
+    <script src="/javascripts/xlsx/jszip.js"></script>
+    <!--<script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>-->
+    <!--<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>-->
+
+    <!--        <script src="/__/firebase/7.15.1/firebase-app.js"></script>
+                <script src="/__/firebase/7.15.1/firebase-auth.js"></script>
+                <script src="/__/firebase/7.15.1/firebase-firestore.js"></script>
+                <script src="/__/firebase/init.js"></script>-->
+
+    <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+
+    <script src="/app/js/intlTelInput.js?1721468771539"></script>
+
+
+    <script src="/app/js/Firebase.js"></script>
+    <script src="/app/js/home.js"></script>
+</body>
+
+</html>

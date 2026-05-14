@@ -1,0 +1,24 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="packinglistgModel" aria-hidden="true" id="packinglist">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-dark">
+            <div class="modal-header">
+                <div id="cusname">
+
+                </div>
+                <button type="button" class="btn btn-inverse-success mt-1 float-right" id="exporte-pakingList-excel">
+                    Excel
+                </button>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="d-none">
+                    <table id="excle-packingList-Table" data-cols-width="10,10,10,10,10,10,10,10,10">
+                    </table>
+                </div>
+                <iframe class="iframe packinglist-pdf" id="packinglist-pdf"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

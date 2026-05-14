@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-12 grid-margin">
+        <div class="d-flex justify-content-between flex-wrap">
+            <div class="d-flex align-items-end flex-wrap">
+                <div class="mr-md-3 mr-xl-3">
+                    <h2 class="m-b-8">SHIPMENTS.</h2>
+                    <p class="mb-md-0">Shipments of Asian Cargo.</p>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-end flex-wrap">
+
+                <button class="input-group btn btn-outline-dark w-auto m-r-20" id="previous-record">
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="d-inline-block text-left font-weight-bold m-l-10">Previous<small class="font-weight-light d-block m-t-3">for shipment records.</small></span>
+                </button>
+                
+                <div class="border border-dark btn w-auto m-r-20">
+                    <span class="d-inline-block text-left font-weight-bold"><span class="show-records">0</span><small class="font-weight-light d-block m-t-3 border-top border-dark total-record">10</small></span>
+                </div>
+
+                <button class="input-group btn btn-outline-dark w-auto" id="next-record">
+                    <span class="d-inline-block text-left font-weight-bold m-r-10">Next<small class="font-weight-light d-block m-t-3">for shipment records.</small></span>
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card p-10 table-responsive" style="min-height: calc(100vh - 300px)">
+    <table class="display table table-striped table-bordered w-100" id="shipmentsTable">
+        <thead>
+            <tr>
+                <th class="d-none">Original Date</th>
+                <th class="d-none">Exporter Ref</th>
+                <th class="d-none">Shipment</th>
+                <th>Shipment</th>
+                <th>Date</th>
+                <th>Exporter</th>
+                <th>Cartons</th>
+                <th>Goods</th>
+                <th>Customers</th>
+                <th>Status</th>
+                <th>Actions</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="setting-modal"></div>
+<div class="unloading-modal"></div>
+<div class="weight-modal"></div>
+<div class="header-modal"></div>
+<div class="packinglist-modal"></div>
+<div class="fullcriteria-modal"></div>
+<div class="deliveryReport-modal"></div>
+<div class="invoice-modal"></div>
+<div class="customer-invoice-modal"></div>
+<div class="customer-collection-modal"></div>
+<script src="/app/js/shipment/shipment.js"></script>

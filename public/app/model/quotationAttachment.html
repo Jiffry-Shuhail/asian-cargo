@@ -1,0 +1,102 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="clearingAttchmentModel" aria-hidden="true" id="clearingAttchment">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Quotation Shipment Attachment</h5>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="btn-group dropleft" role="group">
+                    <button type="button" class="close" style="padding-left: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right border"  style="margin-top: 15px; min-width: 15rem;">
+                        <small class="dropdown-item-text">Value Per Tone</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0.700" placeholder="Per Tone" id="valuePerTone"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-all-pertone"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Need Weight</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Need Weight" id="need-weight-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-need-weight"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Adjust Weight Percent</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Adjust Weight %" id="adjust-weight-poercent-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-adjust-weight-percent"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+
+                <div class="row p-t-15">
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Net Weight</small>
+                            <span class="well" id="total-net-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Need Weight</small>
+                            <span class="well" id="need-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Adjust Weight</small>
+                            <span class="well" id="adjust-weight-invoice">-0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Gross Weight</small>
+                            <span class="well" id="gross-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Amount</small>
+                            <span class="well" id="total-amount-invoice">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive p-t-15 invoice-modal-table">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr class="text-center">
+                                <th>#</th>
+                                <th>Carton</th>
+                                <th>Goods</th>
+                                <th>Value Per Tone</th>
+                                <th>Per Weight</th>
+                                <th>Net Weight</th>
+                                <th>Gross Weight</th>
+                                <th>Per Quantity</th>
+                                <th>Total Quantity</th>
+                                <th>Unit</th>
+                                <th>Unit Price</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clearingTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-dark m-l-25" id="sample-xlsx">Sample</button>
+                <input type="file" class="d-none" accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" id='excel'/>
+                <label class="btn btn-inverse-primary attachment" for='excel' id="excel-btn"><i class="fa fa-spinner fa-pulse d-none"></i>Attachment</label>
+                <button type="button" class="btn btn-inverse-success" id="save-clearing"><i class="fa fa-spinner fa-pulse d-none"></i>Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

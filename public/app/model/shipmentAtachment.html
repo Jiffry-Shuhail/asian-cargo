@@ -1,0 +1,53 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="shipmetnattachementModel" aria-hidden="true" id="shipmetnattachement">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 table-responsive">
+                        <table class="table table-bordered attachement-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Contact</th>
+                                    <th>Carton</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Quantity</th>
+                                    <th>Unit</th>
+                                    <th>Weight</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="row p-t-10">
+                    <div class="col-md-6">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="public" checked="" id="customer-switch">
+                            <label>Customer</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="public" checked="" id="weight-switch">
+                            <label>Weight</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-dark" id="sample-xlsx">Sample</button>
+                <input type="file" class="d-none" accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" id='excel'/>
+                <label class="btn btn-inverse-primary attachment" for='excel' id="excel-btn"><i class="fa fa-spinner fa-pulse d-none"></i>Attachment</label>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="editGoods">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-12 stretch-card">
+                    <div class="card">
+                        <div class="card-body p-t-5 p-b-0">
+                            <p class="font-weight-bold m-t-25 m-b-0 default-headline-font registration-heading">Edit Goods Detail</p>
+                            <label class="m-b-20 registration-sub-heading">The Form that you are trying to edit is, affect to the searching criteria.</label>
+                            <form class="form-sample">
+                                <p class="card-description"></p>
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for severe <b>Goods Reference Information</b> with the purpose of preventing duplication.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Goods Name</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border fitstCapitalLetter" id="goods-name" placeholder="Johon Methew" disabled=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Category</label>
+                                            <div class="col-sm-9">
+                                                <!--<input class="form-control form-control-border" autocomplete="off" id="category" placeholder="Spares"/>-->
+                                                <select class="ui fluid search dropdown" id="category">
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 grid-margin">
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5">
+                                                    <button type="button" class="btn btn-inverse-warning edit-customer d-none" >Edit Goods Details</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                                <button type="button" class="btn btn-inverse-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-inverse-primary m-l-10" id="save-goods"><i class="fa fa-spinner fa-pulse d-none"></i>Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/app/js/customer/editCustomer.js"></script>

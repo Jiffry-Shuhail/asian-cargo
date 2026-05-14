@@ -1,0 +1,201 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="invoiceModel" aria-hidden="true" id="invoice">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" id="edit-invoice-content">
+            <div class="modal-header">
+                <h5 class="modal-title invoice-shipment">Modal title</h5>
+
+                <div class="btn-group dropleft" role="group">
+                    <button type="button" class="close" style="padding-left: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right border" style="margin-top: 15px;">
+                        <div class="dropdown-item-text d-flex">
+                            <span class="m-r-80">Invoiced</span>
+                            <div class="ui toggle checkbox ml-auto">
+                                <input type="checkbox" name="isInvoiced" id="isInvoiced">
+                                <label></label>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="invoice-controle">
+                            <div class="dropdown-item-text d-flex">
+                                <span>Sort</span>
+                                <div class="ui toggle checkbox ml-auto">
+                                    <input type="checkbox" name="sort" checked="" id="sort">
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-controle">
+                            <div class="dropdown-item-text d-flex">
+                                <span style="white-space: nowrap">Goods Merged</span>
+                                <div class="ui toggle checkbox ml-auto">
+                                    <input type="checkbox" name="goodsmerged" checked="" id="goodsmerged">
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-controle">
+                            <div class="dropdown-item-text d-flex">
+                                <span>Unit Merged</span>
+                                <div class="ui toggle checkbox ml-auto">
+                                    <input type="checkbox" name="unitmerged" checked="" id="unitmerged">
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item-text d-flex">
+                            <span style="margin-right: 20px;">Insurance</span>
+                            <input type="text" class="form-control double paste" value="0" placeholder="Insurance" id="insurance-invoice"/>
+                        </div>
+                        <div class="dropdown-item-text d-flex">
+                            <span style="margin-right: 45px;">Freight</span>
+                            <input type="text" class="form-control double paste" value="0" placeholder="Freight" id="freight-invoice"/>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Value Per Tone</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0.700" placeholder="Per Tone" id="valuePerTone"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-all-pertone"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Need Weight</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Need Weight" id="need-weight-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-need-weight"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Adjust Weight Percent</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Adjust Weight %" id="adjust-weight-poercent-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-adjust-weight-percent"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-11 p-1">
+                        <input type="text" class="form-control text-transform-none shadow-sm rounded" placeholder="Search hear." id="invoiceSearch"/>
+                    </div>
+                    <div class="col-md-1 p-1">
+                        <button type="button" class="btn btn-sm btn-inverse-secondary w-100 shadow-sm" value="Clear" id="invoiceCalculation">
+                            <i class="mdi mdi-calculator"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Net Weight</small>
+                            <span class="well" id="total-net-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Need Weight</small>
+                            <span class="well" id="need-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Adjust Weight</small>
+                            <span class="well" id="adjust-weight-invoice">-0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1 table-light">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Amount</small>
+                            <span class="well" id="total-amount-invoice">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 p-1 table-responsive rows-responsive">
+                        <table class="table table-bordered table-striped" id="invoice-table">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>#</th>
+                                    <th>Goods</th>
+                                    <th style="border-right: none">VPT</th>
+                                    <th style="border-left: none"></th>
+                                    <th>Per Weight</th>
+                                    <th>Net Weight</th>
+                                    <th>Qty</th>
+                                    <th>Unit</th>
+                                    <th>Price</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-primary" id="invoice-update"><i class="fa fa-spinner fa-pulse d-none"></i>Save changes</button>
+            </div>
+        </div>
+
+        <div class="modal-content modal-dark" id="pdf-invoice-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-sm btn-inverse-danger btn-rounded" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-sm btn-inverse-success mr-2" id="exporte-invoice-excel">
+                    Excel
+                </button>
+                <h5 class="modal-title invoice-shipment text-white">Modal title</h5>
+                <button type="button" class="close text-white" id="edit-invoiced">
+                    <i class="mdi mdi-arrow-left"></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="d-none">
+                    <table id="excle-invoice-Table" data-cols-width="10,15,10,10,10,10,10,10,10">
+                    </table>
+                </div>
+                <iframe class="iframe invoice-pdf" id="invoice-pdf"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="valuePerToneModal" tabindex="-1" role="dialog" aria-labelledby="valuePerToneModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="valuePerToneModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped" id="valuePerToneTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Shipment</th>
+                            <th>Exporter</th>
+                            <th>Value</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

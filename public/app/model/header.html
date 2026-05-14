@@ -1,0 +1,69 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="headerModel" aria-hidden="true" id="header">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Header Setting</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-inverse-primary btn-sm active" id="default-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Deafult"><i class="fa fa-circle"></i></button>
+                        <button class="btn btn-inverse-primary btn-sm" id="edit-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Edit"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-inverse-primary btn-sm" id="new-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Create New"><i class="fa fa-plus"></i></button>
+                    </div>
+                    <div class="col-md-6 new-header-button d-none">
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-5" id="create-new-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Create New"><i class="fa fa-folder-open"></i></button>
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-5" id="unmerge-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Un Merge"><i class="fa fa-object-ungroup"></i></button>
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-20" id="merge-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Merge"><i class="fa fa-object-group"></i></button>
+
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-5" id="right-text-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Right"><i class="fa fa-align-right"></i></button>
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-5" id="center-text-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Center"><i class="fa fa-align-center"></i></button>
+                        <button class="btn btn-inverse-dark btn-sm pull-right m-l-5" id="left-text-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Left"><i class="fa fa-align-left"></i></button>
+                        <button class="btn btn-inverse-dark btn-sm pull-right" id="bold-text-header" data-container="body" data-toggle="popover" data-placement="top" data-content="Bold"><i class="fa fa-bold"></i></button>
+                    </div>
+                </div>
+                <div class="table-responsive p-t-15 default-edit">
+                    <table class="table table-bordered header-table table-bordered-dark">
+                        <tbody>
+                            <tr>
+                                <td colspan="4" rowspan="5" id="header-exporter"></td>
+                                <td colspan="2" rowspan="3" class="text-center">Invoice No & Date</td>
+                                <td colspan="3" rowspan="3" id="header-expoter-ref"></td>
+                            </tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr>
+                                <td colspan="5" rowspan="2"  id="header-consignee"></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td colspan="3" rowspan="2" id="header-buyer"></td>
+                                <td colspan="3" rowspan="2" id="header-country-of-orgine"></td>
+                                <td colspan="3" rowspan="2" id="header-country-of-destination"></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td colspan="3" rowspan="2" id="header-port-of-loading"></td>
+                                <td colspan="3" rowspan="2" id="header-port-of-discharge"></td>
+                                <td colspan="3" rowspan="2" id="header-terms"></td>
+                            </tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="new-header-tab p-t-15 d-none">
+                    <div class="w-100" id="spreadsheet"></div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-primary" id="header-save"><i class="fa fa-spinner fa-pulse d-none"></i>Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

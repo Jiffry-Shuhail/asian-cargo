@@ -1,0 +1,151 @@
+<style>
+    /* .telephone{
+        border-top-right-radius: 0.25rem !important;
+        border-bottom-right-radius: 0.25rem !important;
+        border: 1px solid rgba(34, 36, 38, 0.15) !important;
+        -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease !important;
+        transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease !important;
+        transition: box-shadow 0.1s ease, border-color 0.1s ease !important;
+        transition: box-shadow 0.1s ease, border-color 0.1s ease, -webkit-box-shadow 0.1s ease !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    .telephone:focus{
+        border-color: #85B7D9;
+        background: #FFFFFF;
+        color: rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    } */
+    .iti { width: 100%; }
+</style>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="editCustomer">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-12 stretch-card">
+                    <div class="card">
+                        <div class="card-body p-t-5 p-b-0">
+                            <p class="font-weight-bold m-t-25 m-b-0 default-headline-font registration-heading">Edit Customer Detail</p>
+                            <label class="m-b-20 registration-sub-heading">The Form that you are trying to edit is, affect to the searching criteria.</label>
+                            <form class="form-sample">
+                                <p class="card-description"></p>
+                                <div class="alert alert-dark m-b-35" role="alert">
+                                    Following fields are used for severe <b>Customer Reference Information</b> with the purpose of preventing duplication.
+                                </div>
+                                <div class="row m-b-20">
+                                    <div class="col-md-12 text-center">
+                                            <input type="file" id="cutomer-profile" class="d-none" accept="image/*"/>
+                                            <label for="cutomer-profile" id="customer-prfile-id"><img class="customer-profile-edit cursor11" src="/JIFFRY SHUHAIL.png"/></label>
+                                            <button type="button" class="btn btn-sm btn-icon btn-danger btn-rounded d-none remove-profile" style="position: absolute; bottom: 10px; right: calc(85%/2)"><i class="mdi mdi-delete-variant"></i></button>
+                                            <button type="button" class="btn btn-sm btn-icon btn-primary btn-rounded d-none cropped-ok" style="position: absolute; bottom: 10px; right: calc(85%/2); z-index: 999"><i class="mdi mdi-check"></i></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Customer Name</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control form-control-border fitstCapitalLetter" id="customer-name" placeholder="Johon Methew" disabled=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Contact No</label>
+                                            <div class="col-sm-9">
+                                                <input type="tel" class="form-control form-control-border" id="customer-no" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Other Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border "  id="customer-aname" placeholder="KIRTHI" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border" id="address" placeholder="No 23/A, Kuruduwatta Road"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">NIC</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border "  id="customer-nic" placeholder="xxxxxxxxxxx" />
+                                                <input id="customer-dob" hidden/>
+                                                <span id="customer-nic-text"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Other Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border" id="cutomer-other-address" placeholder="No 23/A, Kuruduwatta Road"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Company Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border "  id="customer-company-name" placeholder="ASIAN CARGO" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Compnay Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-border" id="customer-company-address" placeholder="No 23/A, Kuruduwatta Road"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 grid-margin">
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5">
+                                                    <button type="button" class="btn btn-inverse-warning edit-customer d-none" >Edit Customer Details</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-end flex-wrap">
+                                                <div class="mr-md-3 mr-xl-5"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                                <button type="button" class="btn btn-inverse-danger" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-inverse-primary m-l-10" id="save-customer"><i class="fa fa-spinner fa-pulse d-none"></i>Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/app/js/customer/editCustomer.js"></script>
+<script src="/app/js/customer/nic-retrive.js"></script>

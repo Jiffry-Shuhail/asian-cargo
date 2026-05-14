@@ -1,0 +1,208 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="clearingAttchmentModel" aria-hidden="true" id="clearingAttchment">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Clearing Shipment Attachment</h5>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="btn-group dropleft" role="group">
+                    <button type="button" class="close" style="padding-left: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right border"  style="margin-top: 15px; min-width: 15rem;">
+                        <small class="dropdown-item-text">Value Per Tone</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0.700" placeholder="Per Tone" id="valuePerTone"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-all-pertone"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Need Weight</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Need Weight" id="need-weight-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-need-weight"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Adjust Weight Percent</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Adjust Weight %" id="adjust-weight-poercent-invoce-input"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-adjust-weight-percent"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-item-text d-none" id="codeandDescription">
+                            <input type="file"  accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" id='excel2'/>
+                            <label class="btn btn-inverse-primary attachment w-100" for='excel2' ><i class="fa fa-spinner fa-pulse d-none"></i>Update</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="accordion col-md-12" id="accordionExample">
+                        <div class="card rounded">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Header Details
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse border-bottom" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exporter">Name of Exporter</label>
+                                                <input type="text" class="form-control uppecase" id="exporter" placeholder="Name of Exporter"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exporter-address">Address of Exporter</label>
+                                                <input type="text" class="form-control" id="exporter-address" placeholder="Address of Exporter"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exporter-contact">Contact of Exporter</label>
+                                                <input type="text" class="form-control" id="exporter-contact" placeholder="Contact of Exporter"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exporter-email">Email of Exporter</label>
+                                                <input type="email" class="form-control"  id="exporter-email" placeholder="Email of Exporter"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="consignee">Consignee</label>
+                                                <textarea class="form-control" id="consignee" placeholder="Consignee"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="header-date">Date</label>
+                                                <input type="text" class="form-control" id="exporter-date" placeholder="Date"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="header-invoiceno">Invoice No</label>
+                                                <input type="text" class="form-control" id="exporter-invoiceno" placeholder="Invoice No"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="header-extrapk">Packing List Term</label>
+                                                        <input type="text" class="form-control" id="exporter-extrapk" placeholder="Packing List Term"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="header-extrain">Invoice Term</label>
+                                                        <input type="text" class="form-control" id="exporter-extrain" placeholder="Invoice Term"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="totalCartons">Total Cartons</label>
+                                                    <input type="text" class="form-control integer paste" id="totalCartons" placeholder="Total Carton"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="freight">Freight Charges</label>
+                                                    <input type="text" class="form-control double paste" id="freight" placeholder="Freight Caharges"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-t-15">
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Net Weight</small>
+                            <span class="well" id="total-net-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Need Weight</small>
+                            <span class="well" id="need-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Adjust Weight</small>
+                            <span class="well" id="adjust-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Gross Weight</small>
+                            <span class="well" id="gross-weight-invoice">0.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-1">
+                        <div class="shadow-sm card rounded text-center">
+                            <small>Total Amount</small>
+                            <span class="well" id="total-amount-invoice">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive p-t-15 invoice-modal-table rows-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr class="text-center">
+                                <th>#</th>
+                                <th>Carton</th>
+                                <th>Goods</th>
+                                <th>Value Per Tone</th>
+                                <th>Per Weight</th>
+                                <th>Net Weight</th>
+                                <th>Gross Weight</th>
+                                <th>Per Quantity</th>
+                                <th>Total Quantity</th>
+                                <th>Unit</th>
+                                <th>Unit Price</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clearingTable">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-dark m-l-25" id="sample-xlsx">Sample</button>
+                <input type="file" class="d-none" accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" id='excel'/>
+                <label class="btn btn-inverse-primary attachment" for='excel' id="excel-btn"><i class="fa fa-spinner fa-pulse d-none"></i>Attachment</label>
+                <button type="button" class="btn btn-inverse-success" id="save-clearing"><i class="fa fa-spinner fa-pulse d-none"></i>Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

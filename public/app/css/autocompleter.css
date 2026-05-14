@@ -1,0 +1,106 @@
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    /*display: inline-block;*/
+    width: 100%;
+    height: 100%;
+    /*z-index: 50;*/
+}
+
+.autocomplete-input {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /*z-index: 50;*/
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 999999999;
+    /*position the autocomplete items to be the same width as the container:*/
+    /*top: 100%;*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items-header {
+    position: absolute;
+    /*border: 1px solid #d4d4d4;*/
+    background-color: #ececec !important;
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: none;
+    border-top: none;
+    z-index: 999999999;
+    /*position the autocomplete items to be the same width as the container:*/
+    /*top: 100%;*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: all .5s ease;
+}
+
+.none-bottom-border{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.autocomplete-items1 {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 999999999;
+    /*position the autocomplete items to be the same width as the container:*/
+    /*top: 100%;*/
+    bottom: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items-header div {
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(0);
+/*    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;*/
+}
+.autocomplete-items1 div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+.autocomplete-items1 div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+.autocomplete-items-header div:hover {
+    /*when hovering an item:*/
+    background-color: #c4c2c2;
+}
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #e9e9e9 !important;
+/*    color: #4d83ff;
+    background-color: rgba(77, 131, 255, 0.2) !important;*/
+    background-image: none;
+    /*border-color: rgba(77, 131, 255, 0);*/
+}

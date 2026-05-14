@@ -1,0 +1,59 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="customerInvoiceModel" aria-hidden="true" id="customerInvoice">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" id="edit-customer-invoice-content">
+            <div class="modal-header">
+                <h5 class="modal-title customer-invoice-shipment">Modal title</h5>&nbsp;&nbsp;&nbsp;&nbsp;
+                <small class="text-muted total-customer-invoices"></small>
+                <div class="btn-group dropleft close" style="opacity: 1" role="group">
+                    <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close" style="padding-left: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right border" style="margin-top: 15px; min-width: 15rem;">
+                        <div class="isCustomerInvoicedCheck">
+                            <div class="dropdown-item-text d-flex">
+                                <span class="m-r-80">Invoiced</span>
+                                <div class="ui toggle checkbox ml-auto">
+                                    <input type="checkbox" name="isInvoiced" id="isCustomerInvoiced">
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider isCustomerInvoicedCheck"></div>
+                        <small class="dropdown-item-text">Value Per Weight</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Per Tone" id="valuePerWeight"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-all-per-weight"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <small class="dropdown-item-text">Value Per Packaging</small>
+                        <div class="dropdown-item-text d-flex">
+                            <input type="text" class="form-control double paste" value="0" placeholder="Need Weight" id="valuePerPackaging"/>&nbsp;
+                            <button class="btn btn-inverse-success btn-sm" type="button" id="change-per-packaging"><i class="mdi mdi-repeat"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-inverse-primary" id="customer-invoice-update"><i class="fa fa-spinner fa-pulse d-none"></i>Save changes</button>
+            </div>
+        </div>
+
+        <div class="modal-content modal-dark" id="pdf-customer-invoice-content">
+            <div class="modal-header">
+                <h5 class="modal-title  customer-invoice-shipment text-white">Modal title</h5>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="close text-white" id="edit-customer-invoiced">
+                    <i class="mdi mdi-arrow-left"></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <iframe class="iframe customer-invoice-pdf" id="cutomer-invoice-pdf"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

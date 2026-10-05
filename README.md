@@ -1,5 +1,7 @@
 # Asian Cargo
 
+Latest: [customer invoice milestone, frontend decision and actual-workload budget](docs/CUSTOMER-INVOICE-MILESTONE.md).
+
 Electron + Express cargo operations application using Firebase Authentication and Firestore.
 
 Read the latest [confirmed workflow, subscription design and monthly cost comparison](docs/CONFIRMED-DESIGN.md).

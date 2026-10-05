@@ -1,5 +1,7 @@
 # Asian Cargo — confirmed requirements and budget-conscious design
 
+> Latest clarification: [Customer invoice milestone](CUSTOMER-INVOICE-MILESTONE.md) supersedes workload scenarios and invoice-unlock ambiguities here. Actual workload is fewer than 5 users and 10 shipments/month; manual authorized clone unlocking after invoice is confirmed.
+
 Updated 2026-10-05. This document supersedes the architecture, role and workflow proposals in MODERNIZATION.md where they conflict. The source audit remains valid. This is a reviewable design, not a deployed implementation. No production data, paid service or migration was changed.
 
 ## 1. Confirmed requirements and access status

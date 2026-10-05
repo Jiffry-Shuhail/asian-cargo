@@ -7,7 +7,9 @@
   "scripts": {
     "start": "electron ./main.js",
     "build": "electron-packager . --out=setup/win --platform=win32 --arch=x64 --icon=image/trademark.ico --asar=true --overwrite",
-    "setup": "electron-installer-windows --src out/win/Asian Cargo-win32-x64/ --dest out/installers/"
+    "setup": "electron-installer-windows --src out/win/Asian Cargo-win32-x64/ --dest out/installers/",
+    "test": "node --test test/*.test.js",
+    "start:server": "node bin/www"
   },
   "dependencies": {
     "@google-cloud/storage": "^6.10.1",

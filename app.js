@@ -63,10 +63,15 @@ app.all('*', function (req, res, next) {
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(lessMiddleware(path.join(__dirname, 'temp')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'temp')));
+
 
 app.use('/', indexRouter);
 //app.use('/login', indexRouter);
+// Every business endpoint below this boundary requires active server-side access.
+const { createAccessGuard } = require('./middleware/access');
+const admin = require('firebase-admin');
+app.use(createAccessGuard({ auth: admin.auth(), firestore: admin.firestore() }));
+app.use(express.static(path.join(__dirname, 'temp')));
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/addExporter', exporterRouter);
@@ -95,7 +100,7 @@ app.use("/getCustomer", (req, res) => {
 
 
 app.use("/manualUpdateShipment", (req, res) => {
-    customer.manualUpdateShipment(req, res);
+    res.status(410).json({error: "MAINTENANCE_ENDPOINT_REMOVED"});
 });
 
 app.use("/serachCustomer", (req, res) => {
@@ -176,7 +181,7 @@ app.use("/getSerchedProductNCategoru", (req, res) => {
 });
 
 app.post("/updateProducts", (req, res) => {
-     products.addOrUpdateClearing(req, res);
+     res.status(501).json({error: "PRODUCT_UPDATE_NOT_IMPLEMENTED"});
 });
 
 app.use("/removePendingShipment", (req, res) => {

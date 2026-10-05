@@ -1,5 +1,7 @@
 # Asian Cargo — business requirements and modernization baseline
 
+> Superseded design notice (2026-10-05): [Confirmed design and budget review](CONFIRMED-DESIGN.md) is authoritative for confirmed workflow/roles, subscription management and architecture. ADR-001 below is retained as historical rationale and is superseded by ADR-002; Cloud Run is no longer the proposed standalone backend.
+
 Review date: 2026-10-05. Source baseline: main, commit 126589b961fe28079d38f2c41dcadda2c5c94da9. Implementation branch: modernization/security-foundation.
 
 This is a source-derived baseline, not stakeholder-approved requirements or a production data audit. No production database, credentials, cloud settings or executable desktop session were accessed. No existing test suite was found in package.json. Findings are not exhaustive. Proposed roles, targets and transitions require validation.

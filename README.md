@@ -2,6 +2,8 @@
 
 Electron + Express cargo operations application using Firebase Authentication and Firestore.
 
+Read the latest [confirmed workflow, subscription design and monthly cost comparison](docs/CONFIRMED-DESIGN.md).
+
 See [business requirements, audit, architecture and rollout plan](docs/MODERNIZATION.md).
 
 This modernization branch adds a fail-closed access boundary. Existing accounts require an active server-managed `Access/{uid}` record before using business endpoints. It is not production-ready and has not been deployed.

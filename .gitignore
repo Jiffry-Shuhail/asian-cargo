@@ -1,1 +1,9 @@
+node_modules/
+serviceAccountKey.json
+.env
+.env.*
+!.env.example
+temp/
+setup/
+
 .qodo

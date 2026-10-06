@@ -1,4 +1,4 @@
-const { app, BrowserWindow, screen, session, Notification, shell, ipcMain, remote} = require('electron')
+const { app, BrowserWindow, screen, session, Notification, shell, ipcMain} = require('electron')
 const {download} = require("electron-dl");
 const server = require(__dirname+"/bin/www");
 var path = require('path');
@@ -17,13 +17,13 @@ function createWindow () {
   })
   
   win.setMenuBarVisibility(false);
-  win.webContents.openDevTools();
+  if (process.env.NODE_ENV === 'development') win.webContents.openDevTools();
   win.loadURL('http://localhost:3000/', {userAgent: 'Chrome'});
-  remote.getCurrentWindow().toggleDevTools();
+
   ipcMain.on("download", (event, info) => {
 	  //let prop=info.properties;
         download(BrowserWindow.getFocusedWindow(), info.url, info.properties)
-            .then(dl => window.webContents.send("download complete", dl.getSavePath()));
+            .then(dl => win.webContents.send("download complete", dl.getSavePath()));
     });
 }
 
